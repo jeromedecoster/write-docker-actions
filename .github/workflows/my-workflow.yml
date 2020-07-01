@@ -1,6 +1,7 @@
 name: Docker Actions
 
 on:
+  push:
   pull_request:
     types: [labeled]
 
@@ -12,4 +13,4 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: meow
-        uses: /.github/actions/cat-facts
+        uses: ./.github/actions/cat-facts
